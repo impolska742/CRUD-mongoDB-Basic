@@ -1,9 +1,9 @@
 const axios = require("axios");
-
+const appUrl = "https://calm-headland-70598.herokuapp.com";
 exports.homeRoutes = (req, res) => {
   // Make a get request to /api/users
   axios
-    .get("http://localhost:3000/api/users")
+    .get(appUrl + "/api/users")
     .then((response) => {
       res.render("index", {
         users: response.data,
@@ -15,30 +15,13 @@ exports.homeRoutes = (req, res) => {
 };
 
 exports.addUser = (req, res) => {
-  axios.post("http://localhost:3000/api/users");
+  axios.post(appUrl + "/api/users");
   res.render("add_user");
 };
 
-// exports.updateUser = (req, res) => {
-//   axios
-//     .get("http://localhost:3000/api/users", {
-//       params: {
-//         id: req.query.id,
-//       },
-//     })
-//     .then((user_data) => {
-//       res.render("update_user", {
-//         user: user_data,
-//       });
-//     })
-//     .catch((err) => {
-//       res.send(err);
-//     });
-// };
-
 exports.updateUser = (req, res) => {
   axios
-    .get("http://localhost:3000/api/users", { params: { id: req.query.id } })
+    .get(appUrl + "/api/users", { params: { id: req.query.id } })
     .then(function (userdata) {
       res.render("update_user", { user: userdata.data });
     })
