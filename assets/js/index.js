@@ -1,4 +1,4 @@
-const appUrl = "https://calm-headland-70598.herokuapp.com/";
+const appUrl = "https://calm-headland-70598.herokuapp.com";
 
 $("#add_user").submit(function (event) {
   alert("Data inserted successfully");
@@ -33,7 +33,7 @@ if (window.location.pathname == "/") {
     var id = $(this).attr("data-id");
 
     var request = {
-      url: `http://localhost:3000/api/users/${id}`,
+      url: appUrl + `/api/users/${id}`,
       method: "DELETE",
     };
 
