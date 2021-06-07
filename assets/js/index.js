@@ -1,3 +1,5 @@
+const appUrl = "https://calm-headland-70598.herokuapp.com/";
+
 $("#add_user").submit(function (event) {
   alert("Data inserted successfully");
 });
@@ -15,7 +17,7 @@ $("#update_user").submit(function (event) {
   // console.log(data);
 
   var request = {
-    url: `http://localhost:3000/api/users/${data.id}`,
+    url: appUrl + `/api/users/${data.id}`,
     method: "PUT",
     data: data,
   };
