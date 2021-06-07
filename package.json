@@ -1,0 +1,30 @@
+{
+  "name": "crud-mongodb",
+  "version": "1.0.0",
+  "description": "CRUD-APPLICATION with Express and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/impolska742/CRUD-mongoDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/impolska742/CRUD-mongoDB/issues"
+  },
+  "homepage": "https://github.com/impolska742/CRUD-mongoDB#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
